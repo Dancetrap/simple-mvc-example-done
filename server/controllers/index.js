@@ -3,6 +3,8 @@ const models = require('../models');
 
 // get the Cat model
 const { Cat } = models;
+// get Dog model
+const { Dog } = models;
 
 // default fake data so that we have something to work with until we make a real Cat
 const defaultData = {
@@ -81,6 +83,10 @@ const hostPage2 = (req, res) => {
 // Function to render the untemplated page3.
 const hostPage3 = (req, res) => {
   res.render('page3');
+};
+
+const hostPage4 = (req, res) => {
+  res.render('page4');
 };
 
 // Get name will return the name of the last added cat.
@@ -189,6 +195,10 @@ const searchName = async (req, res) => {
     console.log(err);
     return res.status(500).json({ error: 'Something went wrong' });
   }
+};
+
+const setDogName = (req, res) => {
+
 };
 
 /* A function for updating the last cat added to the database.
